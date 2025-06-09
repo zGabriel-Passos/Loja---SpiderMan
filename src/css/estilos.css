@@ -1,0 +1,250 @@
+body {
+	font-family: "Roboto", sans-serif;
+	background-image: url(../imagens/spider-man-logo-qkwgwwilgxvg4wf0.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	/* Centraliza horizontal e vertical */
+	background-attachment: fixed;
+	/* (opcional) faz a imagem ficar fixa ao rolar */
+}
+
+.cabecalho {
+	background-color: #0e0027;
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+	margin-bottom: 60px;
+}
+
+.cabecalho img {
+	width: 20%;
+}
+
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+.container .produtos {
+	color: #ffffff;
+	font-size: 24px;
+	font-weight: 500;
+	margin-bottom: 32px;
+	line-height: 32px;
+	letter-spacing: 2px;
+}
+
+.container .filtros {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-bottom: 32px;
+}
+
+.container .categorias-cartas,
+.container .preco-cartas {
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+}
+
+.container label {
+	letter-spacing: 2px;
+	font-weight: 500;
+	color: #ffffff;
+}
+
+.container .categorias-cartas select,
+.container .preco-cartas input {
+	padding: 16px 13px;
+	border-radius: 2px;
+	border: 2px solid #ffffff;
+	background-color: #f0f0f0af;
+	color: #130234;
+	height: 52px;
+}
+
+.container select:focus,
+.container input:focus,
+.container select:focus-visible,
+.container input:focus-visible {
+	outline: none;
+}
+
+.container select.categoria {
+	appearance: none;
+	background: url(../imagens/seta-para-baixo.png) 97% center no-repeat;
+}
+
+.container .filtros .btn-filtrar {
+	border: none;
+	background-color: #3328d3;
+	color: #ededed;
+	padding: 16px 32px;
+	font-weight: 500;
+	align-self: end;
+	width: 177px;
+	height: 52px;
+	cursor: pointer;
+	letter-spacing: 2px;
+	transition: 0.3s;
+}
+
+.container .filtros .btn-filtrar:hover {
+	background-color: #8f0000;
+}
+
+.container .cartas {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 32px;
+	margin-top: 32px;
+}
+
+.container .cartas .carta {
+	max-width: 365px;
+	background-color: #ededed3d;
+	color: #0e0027;
+	border-radius: 20px;
+	box-shadow: 0 6px 12px rgb(0, 0, 0, 0.2);
+}
+
+.container .carta img {
+	width: 100%;
+	padding: 20px;
+	border-radius: 30px;
+}
+
+.container .carta .informacoes {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	background-color: #ffffff;
+	padding: 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
+.container .carta .informacoes .nome-personagem {
+	font-size: 24px;
+	font-weight: 700;
+	color: #111111;
+}
+
+.container .carta .informacoes .categoria {
+	color: #7e7e7e;
+	font-weight: 700;
+}
+
+.container .carta .informacoes .preco {
+	font-size: 24px;
+	letter-spacing: 2px;
+	font-weight: 700;
+	color: #4d8e5c;
+}
+
+.container .carta .informacoes .btn-comprar {
+	color: #ededed;
+	background-color: #3328d3;
+	padding: 16px;
+	border-radius: 4px;
+	letter-spacing: 2px;
+	transition: 0.3s;
+	text-align: center;
+	text-decoration: none;
+}
+
+.container .carta .informacoes .btn-comprar:hover {
+	background-color: #8f0000;
+}
+
+.rodape {
+	background-color: #0e0027;
+	display: flex;
+	justify-content: center;
+	color: #ededed;
+	padding: 20px;
+	margin-top: 60px;
+}
+
+.esconder {
+	display: none;
+}
+
+.mostrar {
+	display: block;
+}
+
+.cartas:hover>.carta:not(:hover) {
+	filter: blur(2px);
+	opacity: 0.8;
+	transition: 0.40s;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 999;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.modal-conteudo {
+	background-color: #fff;
+	margin: 5% auto;
+	padding: 20px;
+	width: 90%;
+	max-width: 500px;
+	border-radius: 10px;
+	position: relative;
+	text-align: center;
+	animation: fadeIn 0.4s ease forwards;
+	opacity: 0;
+}
+
+
+.modal-conteudo img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 8px;
+	margin-bottom: 15px;
+	border: 3px dashed #000000;
+}
+
+.fechar {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	font-size: 48px;
+	cursor: pointer;
+	color: #ff0909;
+}
+
+.btn-info {
+	display: inline-block;
+	margin-top: 10px;
+	padding: 6px 12px;
+	background-color: #0044cc;
+	color: white;
+	text-decoration: none;
+	border-radius: 6px;
+	font-size: 14px;
+	cursor: pointer;
+}

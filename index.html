@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loja - SpiderMan</title>
+  <link rel="icon" type="image/png" href="./src/imagens/logo2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="./src/css/reset.css">
+  <link rel="stylesheet" href="./src/css/estilos.css">
+  <link rel="stylesheet" href="./src/css/responsivo.css">
+</head>
+
+<body>
+  <header class="cabecalho">
+    <img src="./src/imagens/logo.png" alt="Logo MagickIA" />
+  </header>
+  <main class="container">
+    <h1 class="produtos">Produtos</h1>
+    <div class="filtros">
+      <div class="categorias-cartas">
+        <label for="categoria">Categoria</label>
+        <select id="categoria" class="categoria">
+          <option value="">Selecione um produto</option>
+          <option value="comum">Comum</option>
+          <option value="rara">Rara</option>
+          <option value="épica">Épica</option>
+        </select>
+      </div>
+      <div class="preco-cartas">
+        <label for="preco">Preço máximo (R$)</label>
+        <input type="text" id="preco" class="preco" placeholder="Ex: 100" />
+      </div>
+      <button class="btn-filtrar">Aplicar filtros</button>
+    </div>
+    <ul class="cartas">
+      <li class="carta" data-categoria="Épica" data-preco="3000">
+        <img
+          src="https://legobrasil.vtexassets.com/arquivos/ids/187108-500-500?v=638530415090570000&width=500&height=500&aspect=true"
+          alt="" />
+        <div class="informacoes">
+          <h2 class="nome-personagem">Chaveiro Lego Spider-Man</h2>
+          <span class="categoria">Categoria: Épica</span>
+          <span class="preco">R$ 3.000,00</span>
+          <button class="btn-info">Mais informações</button>
+          <a href="http://wa.me/5511949300469?text=Olá, quero comprar a carta Arkanon!" class="btn-comprar"
+            target="_blank">Comprar</a>
+        </div>
+      </li>
+
+      <li class="carta" data-categoria="Épica" data-preco="4000">
+        <img src="https://down-br.img.susercontent.com/file/sg-11134201-7ra2a-m54k7dym9l7b64.webp" alt="Carta Lymara" />
+        <div class="informacoes">
+          <h2 class="nome-personagem">Camisa Preta Spider-Man</h2>
+          <span class="categoria">Categoria: Épica</span>
+          <span class="preco">R$ 4000,00</span>
+          <button class="btn-info">Mais informações</button>
+          <a href="http://wa.me/5511949300469?text=Olá, quero comprar a carta Lymara!" class="btn-comprar"
+            target="_blank">Comprar</a>
+        </div>
+      </li>
+
+      <li class="carta" data-categoria="Comum" data-preco="800">
+        <img
+          src="https://legobrasil.vtexassets.com/arquivos/ids/184747-500-500?v=638392974725930000&width=500&height=500&aspect=true"
+          alt="Carta Kaelthar" />
+        <div class="informacoes">
+          <h2 class="nome-personagem">Máscara Lego Spider-Man</h2>
+          <span class="categoria">Categoria: Comum</span>
+          <span class="preco">R$ 800,00</span>
+          <button class="btn-info">Mais informações</button>
+          <a href="http://wa.me/5511949300469?text=Olá, quero comprar a carta Kaelthar!" class="btn-comprar"
+            target="_blank">Comprar</a>
+        </div>
+      </li>
+
+      <li class="carta" data-categoria="Rara" data-preco="1500">
+        <img src="https://img.lojasrenner.com.br/item/929352671/original/3.jpg" alt="Carta Maldrik" />
+        <div class="informacoes">
+          <h2 class="nome-personagem">Moletom Vermelho Spider</h2>
+          <span class="categoria">Categoria: Rara</span>
+          <span class="preco">R$ 1500,00</span>
+          <button class="btn-info">Mais informações</button>
+          <a href="http://wa.me/5511949300469?text=Olá, quero comprar a carta Maldrik!" class="btn-comprar"
+            target="_blank">Comprar</a>
+        </div>
+      </li>
+
+      <li class="carta" data-categoria="Comum" data-preco="600">
+        <img src="https://img.lojasrenner.com.br/item/927236414/original/3.jpg" alt="Carta Drahven" />
+        <div class="informacoes">
+          <h2 class="nome-personagem">Moletom Verde Miles</h2>
+          <span class="categoria">Categoria: Comum</span>
+          <span class="preco">R$ 600,00</span>
+          <button class="btn-info">Mais informações</button>
+          <a href="http://wa.me/5511949300469?text=Olá, quero comprar a carta Drahven!" class="btn-comprar"
+            target="_blank">Comprar</a>
+        </div>
+      </li>
+
+      <li class="carta" data-categoria="Comum" data-preco="400">
+        <img src="https://down-br.img.susercontent.com/file/sg-11134201-7reob-m8qxau7qm8nta6.webp"
+          alt="Carta Nyxsombra" />
+        <div class="informacoes">
+          <br><br>
+          <h2 class="nome-personagem">Camisa Preta Spider-Man</h2>
+          <span class="categoria">Categoria: Comum</span>
+          <span class="preco">R$ 400,00</span>
+          <button class="btn-info">Mais informações</button>
+          <a href="http://wa.me/5511949300469?text=Olá, quero comprar a carta Nyxsombra!" class="btn-comprar"
+            target="_blank">Comprar</a>
+        </div>
+      </li>
+    </ul>
+  </main>
+  <div class="modal" id="modal">
+    <div class="modal-conteudo">
+      <span class="fechar" id="fecharModal">&times;</span>
+      <img id="modalImagem" src="" alt="Imagem do Produto" />
+      <h2 id="modalTitulo">Título</h2>
+      <p id="modalDescricao">Descrição do produto aqui.</p>
+    </div>
+  </div>
+  <footer class="rodape">@2025 - Todos os direitos reservados</footer>
+  <script src="./src/js/index.js"></script>
+</body>
+
+</html>
